@@ -22,6 +22,14 @@ class Calculator {
         }
         return (double) a / b;
     }
+    public double mod(int a, int b) {
+        if (b == 0) {
+            System.out.println("Error: Division by zero");
+            return 0;
+        }
+        return (double) a % b;
+    }
+
 
     public static void main(String[] args) {
         Calculator calc = new Calculator();
@@ -31,5 +39,6 @@ class Calculator {
         System.out.println("Subtraction: " + calc.subtract(a, b));
         System.out.println("Multiplication: " + calc.multiply(a, b));
         System.out.println("Division: " + calc.divide(a, b));
+	System.out.println("Modulus: " + calc.mod(a, b));
     }
 }
